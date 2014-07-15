@@ -1,0 +1,25 @@
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes.dex : \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/BuildConfig.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/LectorRSS.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/R$attr.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/R$drawable.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/R$string.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/R$xml.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/com/phonegap/spain/R.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager$1.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/classes/org/apache/cordova/networkinformation/NetworkManager.class \
+/Users/cmc/Documents/LectorRSSClase/LectorRSSPhonegapSpain/platforms/android/ant-build/dexedLibs/classes-0a9cd54e56bc5dafb3b5a94a26700142.jar \

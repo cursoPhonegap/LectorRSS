@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lector RSS</title>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.3.min.css">
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery.mobile-1.4.3.min.js"></script>
+        <style>
+            .cabecera{
+                background-color: #3385aa !important;
+                color: whitesmoke !important; 
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="list-feeds-page" data-role="page" data-title='Lista Noticias'>
+            <header class="cabecera" data-role="header" data-position="fixed">
+                <h1>Phonegap Spain</h1>
+            </header>
+            <div data-role="content">
+                <ul id="feeds-list" data-role="listview" data-filter="true">
+                        
+                </ul>
+            </div>
+        </div>
+    </body>
+    <script>
+        // variable global que contiene todas las noticias
+        var noticias;
+        
+        $(document).ready(function(){
+            
+            // comprobamos la conexión
+            // Con la versión 3.5.0 no está funcionando el plugin de conexión hasta que lo actualicen.
+      /*      var networkState = navigator.connection.type;
+        
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+            if(states[networkState] === "No network connection" ){
+                noticias = JSON.Parse(LocalStorage.getItem("noticias"));
+            }else{
+            
+            ...
+            }
+            
+            alert('Connection type: ' + states[networkState]);
+            
+            */
+         //   document.addEventListener("offline", function(){
+                
+        //        alert("Pasamos a offline");   
+                
+        //    }, false);
+            
+            
+            // url de la que obetenemos nuestro RSS
+            var url = "http://www.phonegapspain.com/feed/";
+            
+            // Petición AJAX mediante googleapis para poder tener derecho de acceso al servidor de el RSS
+            $.ajax({
+                type: "GET",
+                url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(url),
+                dataType: 'json',
+                error: function(){
+                    // El error que nos trae
+                    alert('Error al obtener el RSS');
+                },
+                success: function(xml){
+                    
+                    
+                    // Si todo ha ido bien y recibimos respuesta, nos devuelve un objeto con toda la información
+                    // añadimos todas las entradas a nuestra variable global
+                    noticias = xml.responseData.feed.entries;
+                    console.log(noticias);
+                    
+                    var storage = JSON.stringify(noticias);
+                    localStorage.setItem("noticias",storage);
+                    
+                    // recorremos con un for todo el array de noticias
+                    for(var i=0;i<noticias.length;i++){
+                        
+                        // creamos un li con los datos que nos interesan
+                        var liContent = '<li><a data-noticia="'+i+'" href="#"><h2>'+noticias[i].title+'</h2><p>'+noticias[i].publishedDate+'</p></a></li>';
+                        
+                        // Añadimos el 'li' creado a nuestro 'ul'
+                        $("#feeds-list").append(liContent);
+                    } 
+                    
+                    // refrescamos la lista para que coja el estilo correcto
+                    $("#feeds-list").listview('refresh');
+                }
+            });
+            
+            // evento al hacer click en una etiqueta 'a' dentro de UL
+            $("ul").on("click","a",function(){
+                
+                // obtenemos el indice de la noticia pulsada mediante data
+                var pulsado = parseInt($(this).data("noticia"));
+                
+                // Cogemos el link de la noticia
+                var enlaceDeNoticia = noticias[pulsado].link;
+                
+                // Abrimos el enlace, inAppBrowser está actuando.
+                var ref = window.open(enlaceDeNoticia,'_blank','location=yes');
+                
+                // evento cuando empieza la carga
+              //  ref.addEventListener('loadstart', function(){
+            //        console.log("Pagina cargando");   
+            //    });
+                
+                ref.addEventListener('loadstop', function() {
+                    ref.insertCSS({code: ".top{ background: red !important "});
+                });
+            });
+            
+            
+            
+        });
+    </script>
+</html>
